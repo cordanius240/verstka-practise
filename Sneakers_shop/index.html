@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SneakMax</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/cdn.jsdelivr.net_npm_jquery.maskedinput@1.4.1_src_jquery.maskedinput.min.js"
+        type="text/javascript"></script>
+    <script defer src="./js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__section">
+            <div class="header__container">
+                <h1 class="header__title">SneakMax</h1>
+                <nav class="nav__header">
+                    <ul class="header__items">
+                        <li class="header__item"><a href="" class="header__item-link">Каталог</a></li>
+                        <li class="header__item"><a href="" class="header__item-link">О нас</a></li>
+                        <li class="header__item"><a href="" class="header__item-link">Подбор товара</a></li>
+                        <li class="header__item"><a href="" class="header__item-link">Наша команда</a></li>
+                        <li class="header__item"><a href="" class="header__item-link">Доставка и оплата</a></li>
+                        <li class="header__item"><a href="" class="header__item-link">Контакты</a></li>
+                        <li class="header__item cart-container"><a href="" class="header__item-link">Корзина</a>
+                            <div class="header__item-cartcontainer">
+                                <svg class="header__item-cart-img" xmlns="http://www.w3.org/2000/svg" width="20"
+                                    height="19" viewBox="0 0 20 19" fill="none">
+                                    <path
+                                        d="M20 6.57893H16.6038L13.0359 0.319309C12.8589 0.0083658 12.475 -0.093156 12.1784 0.0938088C11.8823 0.280773 11.7865 0.684867 11.9641 0.996475L15.1461 6.57893H4.85388L8.03587 0.996431C8.21348 0.684823 8.11767 0.280729 7.82164 0.0937645C7.52439 -0.0932003 7.14173 0.00832153 6.96411 0.319265L3.39617 6.57888H0V7.89468H1.35651L2.94432 16.8103C3.11033 17.7438 3.88547 18.421 4.78761 18.421H15.2124C16.1145 18.421 16.8896 17.7438 17.055 16.811L18.6434 7.89468H20C20 7.89468 20 6.57893 20 6.57893ZM15.8264 16.5688C15.7715 16.8797 15.5133 17.1053 15.2124 17.1053H4.78761C4.4867 17.1053 4.22854 16.8798 4.173 16.5681L2.62789 7.89468H17.3721L15.8264 16.5688Z"
+                                        fill="white" />
+                                </svg>
+                                <div class="header__item-cart-counter">
+                                    <p class="header__item-cart-counter-text">0</p>
+                                </div>
+                            </div>
+                        </li>
+                        <div class="absolute-container">
+                            <div class="modal_smallcart">
+                                <div class="modal__smallcart_content">
+                                    <div class="modal__smallcart__container">
+                                        <div class="modal__smallcart-items">
+                                        </div>
+                                        <div class="modal__smallcart-footer">
+                                            <div class="smallcart__footer">
+                                                <p class="smallcart__footer-text">Итого:</p>
+                                                <p class="smallcart__footer-finalprice">25 789 ₽</p>
+                                            </div>
+                                            <button class="smallcart__footer-button">Перейти в корзину</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="intro">
+            <div class="intro-wrapper">
+                <div class="intro__container">
+                    <h1 class="intro-title">Кроссовки известных брендов
+                        с доставкой по России и СНГ</h1>
+                    <p class="intro-text">Мы продаем кроссовки брендов Nike, Adidas, Puma, Reebok, Converse и многие
+                        другие по низким ценам</p>
+                    <button class="intro-button">Перейти к покупкам</button>
+                </div>
+                <h1 class="background-text">
+                    SneakMax
+                </h1>
+            </div>
+        </section>
+        <section class="catalog">
+            <div class="catalog-wrapper">
+                <h2 class="catalog__sort-text">Каталог</h2>
+                <div class="catalog__flexbox">
+                    <div class="catalog__sort">
+                        <div class="catalog__sort-menu">
+                            <p class="sort__menu-title">Подбор</br>
+                                по параметрам</p>
+                            <p class="sort__menu_price">Цена, руб</p>
+                            <div class="sort__menu-price-scroll">
+                                <input type="text" class="sort__menu-price" placeholder="1850">
+                                <svg width="1" height="34" viewBox="0 0 1 34" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="0.5" y1="2.18557e-08" x2="0.499999" y2="34" stroke="#B2B5BB" />
+                                </svg>
+                                <input type="text" class="sort__menu-price" placeholder="25 768">
+                            </div>
+                            <div class="absolute-container">
+                                <svg class="sort__menu-lowerborder" width="240" height="20" viewBox="0 0 240 20"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.5" y="0.5" width="4" height="19" rx="2" fill="#444B58"
+                                        stroke="#FFF4EE" />
+                                    <rect x="239.5" y="8.5" width="3.00001" height="239"
+                                        transform="rotate(90 239.5 8.5)" fill="#444B58" stroke="#FFF4EE" />
+                                    <rect x="234.5" y="0.5" width="5" height="19" rx="2.5" fill="#444B58"
+                                        stroke="#FFF4EE" />
+                                </svg>
+                            </div>
+                            <p class="catalog__sort-gender-title">Пол</p>
+                            <div class="catalog__sort-gender-choose">
+                                <label for="min" class="label_gender">
+                                    <input type="radio" class="catalog__sort-gender" name="gender" id="min">
+                                    <span class="catalog__sort-gender-span"></span>
+                                </label>
+                                <p class="catalog__sort-gender-text">Мужской</p>
+                                <label for="max" class="label_gender">
+                                    <input type="radio" class="catalog__sort-gender" name="gender" id="max">
+                                    <span class="catalog__sort-gender-span"></span>
+                                </label>
+                                <p class="catalog__sort-gender-text">Женский</p>
+                            </div>
+                            <p class="catalog__sort-size">Размер</p>
+                            <div class="catalog__sort-sizes">
+                                <div class="catalog__sort-onesize">35</div>
+                                <div class="catalog__sort-onesize">36</div>
+                                <div class="catalog__sort-onesize">37</div>
+                                <div class="catalog__sort-onesize">38</div>
+                                <div class="catalog__sort-onesize">39</div>
+                                <div class="catalog__sort-onesize">40</div>
+                                <div class="catalog__sort-onesize">41</div>
+                                <div class="catalog__sort-onesize">42</div>
+                                <div class="catalog__sort-onesize">43</div>
+                            </div>
+                            <button class="catalog__sort-submit">Применить</button>
+                            <div class="catalog__sort-decline-container">
+                                <a href="" class="catalog__sort-decline">сбросить</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__items">
+                        <div class="catalog__item">
+                            <img src="./src/item.png" alt="" class="catalog__item-img">
+                            <p class="catalog__item-name">Кроссовки Nike Air Force 1 '07 QS</p>
+                            <p class="catalog__item-price">11 000₽</p>
+                        </div>
+                        <div class="catalog__item">
+                            <img src="./src/item.png" alt="" class="catalog__item-img">
+                            <p class="catalog__item-name">Кроссовки Nike Air Force 1 '07 QS</p>
+                            <p class="catalog__item-price">11 000₽</p>
+                        </div>
+                        <div class="catalog__item">
+                            <img src="./src/item.png" alt="" class="catalog__item-img">
+                            <p class="catalog__item-name">Кроссовки Nike Air Force 1 '07 QS</p>
+                            <p class="catalog__item-price">11 000₽</p>
+                        </div>
+                        <div class="catalog__item">
+                            <img src="./src/item.png" alt="" class="catalog__item-img">
+                            <p class="catalog__item-name">Кроссовки Nike Air Force 1 '07 QS</p>
+                            <p class="catalog__item-price">11 000₽</p>
+                        </div>
+                        <div class="catalog__item">
+                            <img src="./src/item.png" alt="" class="catalog__item-img">
+                            <p class="catalog__item-name">Кроссовки Nike Air Force 1 '07 QS</p>
+                            <p class="catalog__item-price">11 000₽</p>
+                        </div>
+                        <div class="catalog__item">
+                            <img src="./src/item.png" alt="" class="catalog__item-img">
+                            <p class="catalog__item-name">Кроссовки Nike Air Force 1 '07 QS</p>
+                            <p class="catalog__item-price">11 000₽</p>
+                        </div>
+                        <div class="catalog__item">
+                            <img src="./src/item.png" alt="" class="catalog__item-img">
+                            <p class="catalog__item-name">Кроссовки Nike Air Force 1 '07 QS</p>
+                            <p class="catalog__item-price">11 000₽</p>
+                        </div>
+                        <div class="catalog__item">
+                            <img src="./src/item.png" alt="" class="catalog__item-img">
+                            <p class="catalog__item-name">Кроссовки Nike Air Force 1 '07 QS</p>
+                            <p class="catalog__item-price">11 000₽</p>
+                        </div>
+                        <div class="catalog__item">
+                            <img src="./src/item.png" alt="" class="catalog__item-img">
+                            <p class="catalog__item-name">Кроссовки Nike Air Force 1 '07 QS</p>
+                            <p class="catalog__item-price">11 000₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="aboutus">
+            <div class="aboutus__wrapper">
+                <div class="aboutus__container">
+                    <div class="aboutus__info">
+                        <h1 class="aboutus__info-title">Пара слов о нас</h1>
+                        <p class="aboutus__info-text">Спорт держит нас в форме. Учит дисциплине. Объединяет нас. Через
+                            спорт мы можем менять жизни. В том числе с помощью воодушевляющих историй спортсменов. Чтобы
+                            помочь тебе подняться и двигаться вперед. </p>
+                        <div class="aboutus__info-underline-line">
+                            <svg width="30" height="3" viewBox="0 0 30 3" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line x1="1.31134e-07" y1="1.5" x2="30" y2="1.5" stroke="white" stroke-width="3" />
+                            </svg>
+                            <p class="aboutus__info-underline-text">SneakMax</p>
+                        </div>
+                    </div>
+                    <div class="aboutus__image">
+                        <img src="./src/aboutus.png" alt="aboutus" class="aboutus__image-img">
+                        <div class="absolute-container">
+                            <div class="triangle-frist"></div>
+                            <div class="triangle-second"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="recomindation">
+            <div class="recomindation-wrapper">
+                <div class="recomindation-container">
+                    <h1 class="recomindation_title">Мы подберем идеальную пару для вас</h1>
+                    <p class="recomindation_text">Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для
+                        вас моделями </p>
+                    <p class="recomindation_question">Какой тип кроссовок рассматриваете?</p>
+                    <div class="recomindation__cards">
+                        <div class="recomindation__card">
+                            <img src="./src/recomindation.png" alt="keda" class="recomindation__img">
+                            <div class="recomindation__card-contanier">
+                                <label for="ked" class="label_ked">
+                                    <input type="radio" class="recomindation__card-ked" name="type" id="ked">
+                                    <span class="recomindation__card-ked-span"></span>
+                                </label>
+                                <p class="recomindation__card-ked-text">кеды</p>
+                            </div>
+                        </div>
+                        <div class="recomindation__card">
+                            <img src="./src/recomindation.png" alt="keda" class="recomindation__img">
+                            <div class="recomindation__card-contanier">
+                                <label for="ked" class="label_ked">
+                                    <input type="radio" class="recomindation__card-ked" name="type" id="ked">
+                                    <span class="recomindation__card-ked-span"></span>
+                                </label>
+                                <p class="recomindation__card-ked-text">кеды</p>
+
+                            </div>
+                        </div>
+                        <div class="recomindation__card">
+                            <img src="./src/recomindation.png" alt="keda" class="recomindation__img">
+                            <div class="recomindation__card-contanier">
+                                <label for="ked" class="label_ked">
+                                    <input type="radio" class="recomindation__card-ked" name="type" id="ked">
+                                    <span class="recomindation__card-ked-span"></span>
+                                </label>
+                                <p class="recomindation__card-ked-text">кеды</p>
+                            </div>
+                        </div>
+                        <div class="recomindation__card">
+                            <img src="./src/recomindation.png" alt="keda" class="recomindation__img">
+                            <div class="recomindation__card-contanier">
+                                <label for="ked" class="label_ked">
+                                    <input type="radio" class="recomindation__card-ked" name="type" id="ked">
+                                    <span class="recomindation__card-ked-span"></span>
+                                </label>
+                                <p class="recomindation__card-ked-text">кеды</p>
+                            </div>
+                        </div>
+                        <div class="recomindation__card">
+                            <img src="./src/recomindation.png" alt="keda" class="recomindation__img">
+                            <div class="recomindation__card-contanier">
+                                <label for="ked" class="label_ked">
+                                    <input type="radio" class="recomindation__card-ked" name="type" id="ked">
+                                    <span class="recomindation__card-ked-span"></span>
+                                </label>
+                                <p class="recomindation__card-ked-text">кеды</p>
+                            </div>
+                        </div>
+                        <div class="recomindation__card">
+                            <img src="./src/recomindation.png" alt="keda" class="recomindation__img">
+                            <div class="recomindation__card-contanier">
+                                <label for="ked" class="label_ked">
+                                    <input type="radio" class="recomindation__card-ked" name="type" id="ked">
+                                    <span class="recomindation__card-ked-span"></span>
+                                </label>
+                                <p class="recomindation__card-ked-text">кеды</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="footer__cards">
+                        <p class="footer__cards-text">1 из 3</p>
+                        <button class="footer__cards-button">Следующий шаг</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="team">
+            <div class="container">
+                <div class="red-circle"></div>
+                <div class="border-circle-first"></div>
+                <div class="border-circle-second"></div>
+            </div>
+            <div class="team-wrapper">
+                <div class="team-container">
+                    <h1 class="team-title">Наша команда</h1>
+                    <div class="team__cards">
+                        <div class="team__card">
+                            <img src="./src/team1.png" alt="team1" class="team__card-img">
+                            <p class="team__card-name">Максим Золотарев</p>
+                            <div class="team__card-role">Администратор</div>
+                        </div>
+                        <div class="team__card">
+                            <img src="./src/team2.png" alt="team1" class="team__card-img">
+                            <p class="team__card-name">Максим Золотарев</p>
+                            <div class="team__card-role">Администратор</div>
+                        </div>
+                        <div class="team__card">
+                            <img src="./src/team3.png" alt="team1" class="team__card-img">
+                            <p class="team__card-name">Максим Золотарев</p>
+                            <div class="team__card-role">Администратор</div>
+                        </div>
+                        <div class="team__card">
+                            <img src="./src/team4.png" alt="team1" class="team__card-img">
+                            <p class="team__card-name">Максим Золотарев</p>
+                            <div class="team__card-role">Администратор</div>
+                        </div>
+                        <div class="team__card">
+                            <img src="./src/team5.png" alt="team1" class="team__card-img">
+                            <p class="team__card-name">Максим Золотарев</p>
+                            <div class="team__card-role">Администратор</div>
+                        </div>
+                        <div class="team__card">
+                            <img src="./src/team6.png" alt="team1" class="team__card-img">
+                            <p class="team__card-name">Максим Золотарев</p>
+                            <div class="team__card-role">Администратор</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="qua">
+            <div class="qua-wrapper">
+                <div class="qua__container">
+                    <h1 class="qua__title">Часто задаваемые вопросы</h1>
+                    <div class="questions">
+                        <div class="question">
+                            <div class="question__container">
+                                <p class="question__question">Вопрос 1</p>
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.0527 24.8644L0.370738 0.956325L1.31802 0L25 23.9081L24.0527 24.8644Z"
+                                        fill="black" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M24.6293 1.09188L0.947279 25L0 24.0437L23.682 0.135553L24.6293 1.09188Z"
+                                        fill="black" />
+                                </svg>
+                            </div>
+                            <p class="question__answer">А это ответ 1: в комплексе функционируют 6 детских садов с
+                                площадками, воспитателями и всякими другими людьми</p>
+                        </div>
+                        <div class="question">
+                            <div class="question__container">
+                                <p class="question__question">Вопрос 1</p>
+                                <svg width="25" height="26" viewBox="0 0 25 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.9509 12.3623H25V13.6623H12.9509V26H11.5731V13.6623H0V12.3623H11.5731V0H12.9509V12.3623Z"
+                                        fill="black" />
+                                </svg>
+                            </div>
+                            <p class="question__answer">А это ответ 1: в комплексе функционируют 6 детских садов с
+                                площадками, воспитателями и всякими другими людьми</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="contacts-wrapper">
+                <div class="contacts__container">
+                    <div class="contacts__info">
+                        <h1 class="contacts__info-title">Контакты</h1>
+                        <div class="contacts__info-info">
+                            <p class="contacts__info-text">Главный офис</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41"
+                                fill="none">
+                                <g filter="url(#filter0_d_28699_12)">
+                                    <ellipse cx="18" cy="16.2759" rx="10" ry="9.94828" fill="white" />
+                                </g>
+                                <defs>
+                                    <filter id="filter0_d_28699_12" x="0" y="0.327637" width="40" height="39.8966"
+                                        filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                        <feColorMatrix in="SourceAlpha" type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                        <feOffset dx="2" dy="4" />
+                                        <feGaussianBlur stdDeviation="5" />
+                                        <feColorMatrix type="matrix"
+                                            values="0 0 0 0 0 0 0 0 0 0.0509804 0 0 0 0 0.329412 0 0 0 0.2 0" />
+                                        <feBlend mode="normal" in2="BackgroundImageFix"
+                                            result="effect1_dropShadow_28699_12" />
+                                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_28699_12"
+                                            result="shape" />
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h1 class="contacts__info-number">+7 800 789 89 89</h1>
+                        <p class="contacts__info-adress">г. Санкт-Петербург, Комсомольская, 43 к1</p>
+                        <p class="contacts__info-text">отдел продаж</p>
+                        <h1 class="contacts__info-number">+7 800 789 89 89</h1>
+                        <p class="contacts__info-adress">г. Санкт-Петербург, Комсомольская, 43 к1</p>
+                        <div class="contacts__info-socials">
+                            <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0 22.4861C0 10.3986 9.84974 0.599854 22 0.599854C34.1503 0.599854 44 10.3986 44 22.4861C44 34.5735 34.1503 44.3723 22 44.3723C9.84974 44.3723 0 34.5735 0 22.4861Z"
+                                    fill="#0E5A4C" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M23.1508 29.6689C23.1508 29.6689 23.5743 29.6229 23.7912 29.3954C23.9898 29.1869 23.9829 28.7935 23.9829 28.7935C23.9829 28.7935 23.9565 26.9565 24.8299 26.6853C25.6908 26.4185 26.796 28.4618 27.9691 29.2474C28.8551 29.8415 29.5277 29.7115 29.5277 29.7115L32.6622 29.6689C32.6622 29.6689 34.3012 29.5702 33.5242 28.3116C33.4599 28.2085 33.0708 27.3802 31.1942 25.6788C29.2281 23.8978 29.4921 24.1859 31.8588 21.1048C33.3004 19.2286 33.8766 18.0831 33.6964 17.5933C33.5253 17.1248 32.4648 17.2492 32.4648 17.2492L28.9366 17.2705C28.9366 17.2705 28.6749 17.2358 28.481 17.349C28.2916 17.4599 28.1688 17.7188 28.1688 17.7188C28.1688 17.7188 27.611 19.1703 26.8661 20.4054C25.2948 23.0102 24.667 23.148 24.4099 22.9866C23.8119 22.6089 23.9611 21.4713 23.9611 20.6632C23.9611 18.138 24.3536 17.0856 23.1978 16.8132C22.8145 16.7224 22.5321 16.663 21.5508 16.653C20.2917 16.6406 19.2266 16.6574 18.6229 16.9455C18.2212 17.1371 17.9113 17.5653 18.1007 17.5899C18.3336 17.6202 18.8616 17.7289 19.1417 18.101C19.5032 18.5819 19.4906 19.6601 19.4906 19.6601C19.4906 19.6601 19.6983 22.6324 19.0051 23.0012C18.5299 23.2545 17.878 22.7378 16.4766 20.374C15.7592 19.1636 15.2175 17.8253 15.2175 17.8253C15.2175 17.8253 15.113 17.5754 14.926 17.4409C14.6999 17.2784 14.3842 17.2279 14.3842 17.2279L11.0316 17.2492C11.0316 17.2492 10.5278 17.2627 10.343 17.4767C10.1788 17.6662 10.3303 18.0596 10.3303 18.0596C10.3303 18.0596 12.9553 24.057 15.9279 27.0798C18.6539 29.8504 21.7482 29.6689 21.7482 29.6689H23.1508Z"
+                                    fill="white" />
+                            </svg>
+                            <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_47_762" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
+                                    y="0" width="44" height="45">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0 22.4861C0 10.3986 9.84974 0.599854 22 0.599854C34.1503 0.599854 44 10.3986 44 22.4861C44 34.5735 34.1503 44.3723 22 44.3723C9.84974 44.3723 0 34.5735 0 22.4861Z"
+                                        fill="white" />
+                                </mask>
+                                <g mask="url(#mask0_47_762)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0 22.4861C0 10.3986 9.84974 0.599854 22 0.599854C34.1503 0.599854 44 10.3986 44 22.4861C44 34.5735 34.1503 44.3723 22 44.3723C9.84974 44.3723 0 34.5735 0 22.4861Z"
+                                        fill="#0E5A4C" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M22.001 10.8134C18.8144 10.8134 18.4145 10.8272 17.1629 10.8839C15.9138 10.9408 15.0612 11.1375 14.3151 11.4262C13.5434 11.7243 12.8888 12.1231 12.2366 12.7722C11.5839 13.421 11.183 14.0722 10.8824 14.8397C10.5915 15.5822 10.3935 16.4306 10.3372 17.6728C10.2813 18.9179 10.2666 19.316 10.2666 22.4861C10.2666 25.6562 10.2808 26.0529 10.3375 27.298C10.3949 28.5406 10.5927 29.3889 10.8826 30.1311C11.1825 30.8988 11.5834 31.55 12.2359 32.1988C12.8878 32.8481 13.5424 33.2479 14.3137 33.5461C15.0602 33.8347 15.9131 34.0315 17.162 34.0884C18.4135 34.145 18.8132 34.1589 21.9996 34.1589C25.1864 34.1589 25.5851 34.145 26.8367 34.0884C28.0858 34.0315 28.9394 33.8347 29.686 33.5461C30.4574 33.2479 31.1111 32.8481 31.763 32.1988C32.4157 31.55 32.8166 30.8988 33.1173 30.1313C33.4057 29.3889 33.6037 28.5404 33.6624 27.2982C33.7186 26.0531 33.7333 25.6562 33.7333 22.4861C33.7333 19.316 33.7186 18.9181 33.6624 17.673C33.6037 16.4304 33.4057 15.5822 33.1173 14.84C32.8166 14.0722 32.4157 13.421 31.763 12.7722C31.1104 12.1229 30.4577 11.7241 29.6852 11.4262C28.9372 11.1375 28.0841 10.9408 26.835 10.8839C25.5834 10.8272 25.185 10.8134 21.9974 10.8134H22.001ZM20.9486 12.9172C21.261 12.9167 21.6096 12.9172 22.0012 12.9172C25.134 12.9172 25.5053 12.9284 26.7425 12.9843C27.8865 13.0363 28.5074 13.2265 28.921 13.3863C29.4686 13.5978 29.8589 13.8508 30.2694 14.2593C30.68 14.6678 30.9343 15.0569 31.1474 15.6017C31.308 16.0126 31.4994 16.6303 31.5515 17.7684C31.6077 18.9989 31.6199 19.3686 31.6199 22.4837C31.6199 25.5989 31.6077 25.9685 31.5515 27.199C31.4992 28.3371 31.308 28.9548 31.1474 29.3658C30.9347 29.9105 30.68 30.2984 30.2694 30.7067C29.8587 31.1153 29.4688 31.3682 28.921 31.5797C28.5079 31.7402 27.8865 31.9299 26.7425 31.982C25.5056 32.0379 25.134 32.05 22.0012 32.05C18.8681 32.05 18.4968 32.0379 17.2599 31.982C16.1159 31.9294 15.495 31.7393 15.0811 31.5795C14.5336 31.3679 14.1425 31.115 13.7318 30.7065C13.3211 30.2979 13.0669 29.9098 12.8537 29.3648C12.6931 28.9538 12.5017 28.3362 12.4497 27.1981C12.3934 25.9676 12.3822 25.5979 12.3822 22.4808C12.3822 19.3637 12.3934 18.996 12.4497 17.7655C12.502 16.6274 12.6931 16.0097 12.8537 15.5983C13.0664 15.0535 13.3211 14.6644 13.7318 14.2559C14.1425 13.8473 14.5336 13.5944 15.0811 13.3824C15.4947 13.2219 16.1159 13.0322 17.2599 12.9799C18.3423 12.9313 18.7618 12.9167 20.9486 12.9143V12.9172ZM28.2643 14.8551C27.487 14.8551 26.8563 15.4818 26.8563 16.2553C26.8563 17.0287 27.487 17.6561 28.2643 17.6561C29.0417 17.6561 29.6724 17.0287 29.6724 16.2553C29.6724 15.482 29.0417 14.8546 28.2643 14.8546V14.8551ZM22.0011 16.4919C18.6734 16.4919 15.9755 19.1759 15.9755 22.4864C15.9755 25.7968 18.6734 28.4796 22.0011 28.4796C25.3287 28.4796 28.0257 25.7968 28.0257 22.4864C28.0257 19.1759 25.3285 16.4919 22.0008 16.4919H22.0011ZM22.0012 18.5954C24.1612 18.5954 25.9124 20.3374 25.9124 22.4864C25.9124 24.6351 24.1612 26.3773 22.0012 26.3773C19.8411 26.3773 18.0901 24.6351 18.0901 22.4864C18.0901 20.3374 19.8411 18.5954 22.0012 18.5954Z"
+                                        fill="white" />
+                                </g>
+                            </svg>
+
+                        </div>
+                    </div>
+                    <div class="contacts__image">
+                        <img src="./src/map.png" alt="map" class="contacts__img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="form_section">
+            <div class="form-wrapper">
+                <div class="form-container">
+                    <form action="" class="form">
+                        <h1 class="form-title">Есть вопросы?</h1>
+                        <p class="form-text">Заполните форму и наш менеджер свяжется с вами</p>
+                        <input type="text" class="form-input" placeholder="Ваше имя">
+                        <input type="tel" class="form-input" placeholder="Номер телефона">
+                        <button class="form-button">Отправить</button>
+                    </form>
+                    <div class="instagram-container">
+                        <img src="./src/instagram.png" alt="instagram" class="intagram-logo_inst">
+                        <div class="instagram-grid">
+                            <img src="./src/instagram1.png" alt="instagram" class="intagram-logo">
+                            <img src="./src/instagram2.png" alt="instagram" class="intagram-logo">
+                            <img src="./src/instagram3.png" alt="instagram" class="intagram-logo bigimg">
+                            <img src="./src/instagram4.png" alt="instagram" class="intagram-logo">
+                            <img src="./src/instagram5.png" alt="instagram" class="intagram-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <h1 class="footer-title">SneakMax</h1>
+            <div class="footer__nav">
+                <ul class="footer__cards1">
+                    <li class="footer__card">
+                        <a href="Каталог" class="footer__card-text">Каталог</a>
+                    </li>
+                    <li class="footer__card">
+                        <a href="Каталог" class="footer__card-text">О нас</a>
+                    </li>
+                    <li class="footer__card">
+                        <a href="Каталог" class="footer__card-text">Подбор товара</a>
+                    </li>
+                    <li class="footer__card">
+                        <a href="Каталог" class="footer__card-text">Наша команда</a>
+                    </li>
+                    <li class="footer__card">
+                        <a href="Каталог" class="footer__card-text">Доставка и оплата</a>
+                    </li>
+                    <li class="footer__card">
+                        <a href="Каталог" class="footer__card-text">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="modal_bigitem">
+        <div class="modal__bigitem_content">
+            <div class="modal__bigitem__container">
+                <div class="modal__bigitem-photos">
+                    <img src="./src/bigitem.png" alt="bigitem" class="modal__bigitem-img">
+                    <div class="small__photos">
+                        <img src="./src/bigitem.png" alt="bigitem" class="small__photos-img">
+                        <img src="./src/bigitem.png" alt="bigitem" class="small__photos-img">
+                        <img src="./src/bigitem.png" alt="bigitem" class="small__photos-img">
+                        <img src="./src/bigitem.png" alt="bigitem" class="small__photos-img">
+                        <img src="./src/bigitem.png" alt="bigitem" class="small__photos-img">
+                        <img src="./src/bigitem.png" alt="bigitem" class="small__photos-img">
+                    </div>
+                    <p class="modal__bigitem-title-img">Описание</p>
+                    <p class="modal__bigitem-text">Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой
+                        возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в
+                        шкафу долгие годы. </p>
+                </div>
+                <div class="modal__bigitem-infos">
+                    <div class="modal__bigitem-info">
+                        <p class="modal__bigitem-acticle">Артикул: 879876</p>
+                        <p class="modal__bigitem-amount-title">В наличии:
+                        <p class="modal__bigitem-amount">13 шт</p>
+                        </p>
+                    </div>
+                    <p class="modal__bigitem-title">Женские кроссовки Puma Force 1 Shadow</p>
+                    <div class="modal__bigitem-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="116" height="20" viewBox="0 0 116 20"
+                            fill="none">
+                            <path
+                                d="M9.04894 2.92705C9.3483 2.00574 10.6517 2.00574 10.9511 2.92705L12.0206 6.21885C12.1545 6.63087 12.5385 6.90983 12.9717 6.90983H16.4329C17.4016 6.90983 17.8044 8.14945 17.0207 8.71885L14.2205 10.7533C13.87 11.0079 13.7234 11.4593 13.8572 11.8713L14.9268 15.1631C15.2261 16.0844 14.1717 16.8506 13.388 16.2812L10.5878 14.2467C10.2373 13.9921 9.7627 13.9921 9.41221 14.2467L6.61204 16.2812C5.82833 16.8506 4.77385 16.0844 5.0732 15.1631L6.14277 11.8713C6.27665 11.4593 6.12999 11.0079 5.7795 10.7533L2.97933 8.71885C2.19562 8.14945 2.59839 6.90983 3.56712 6.90983H7.02832C7.46154 6.90983 7.8455 6.63087 7.97937 6.21885L9.04894 2.92705Z"
+                                fill="#F14F4F" />
+                            <path
+                                d="M33.0489 2.92705C33.3483 2.00574 34.6517 2.00574 34.9511 2.92705L36.0206 6.21885C36.1545 6.63087 36.5385 6.90983 36.9717 6.90983H40.4329C41.4016 6.90983 41.8044 8.14945 41.0207 8.71885L38.2205 10.7533C37.87 11.0079 37.7234 11.4593 37.8572 11.8713L38.9268 15.1631C39.2261 16.0844 38.1717 16.8506 37.388 16.2812L34.5878 14.2467C34.2373 13.9921 33.7627 13.9921 33.4122 14.2467L30.612 16.2812C29.8283 16.8506 28.7739 16.0844 29.0732 15.1631L30.1428 11.8713C30.2766 11.4593 30.13 11.0079 29.7795 10.7533L26.9793 8.71885C26.1956 8.14945 26.5984 6.90983 27.5671 6.90983H31.0283C31.4615 6.90983 31.8455 6.63087 31.9794 6.21885L33.0489 2.92705Z"
+                                fill="#F14F4F" />
+                            <path
+                                d="M81.0489 2.92705C81.3483 2.00574 82.6517 2.00574 82.9511 2.92705L84.0206 6.21885C84.1545 6.63087 84.5385 6.90983 84.9717 6.90983H88.4329C89.4016 6.90983 89.8044 8.14945 89.0207 8.71885L86.2205 10.7533C85.87 11.0079 85.7234 11.4593 85.8572 11.8713L86.9268 15.1631C87.2261 16.0844 86.1717 16.8506 85.388 16.2812L82.5878 14.2467C82.2373 13.9921 81.7627 13.9921 81.4122 14.2467L78.612 16.2812C77.8283 16.8506 76.7739 16.0844 77.0732 15.1631L78.1428 11.8713C78.2766 11.4593 78.13 11.0079 77.7795 10.7533L74.9793 8.71885C74.1956 8.14945 74.5984 6.90983 75.5671 6.90983H79.0283C79.4615 6.90983 79.8455 6.63087 79.9794 6.21885L81.0489 2.92705Z"
+                                fill="#F14F4F" />
+                            <path
+                                d="M57.0489 2.92705C57.3483 2.00574 58.6517 2.00574 58.9511 2.92705L60.0206 6.21885C60.1545 6.63087 60.5385 6.90983 60.9717 6.90983H64.4329C65.4016 6.90983 65.8044 8.14945 65.0207 8.71885L62.2205 10.7533C61.87 11.0079 61.7234 11.4593 61.8572 11.8713L62.9268 15.1631C63.2261 16.0844 62.1717 16.8506 61.388 16.2812L58.5878 14.2467C58.2373 13.9921 57.7627 13.9921 57.4122 14.2467L54.612 16.2812C53.8283 16.8506 52.7739 16.0844 53.0732 15.1631L54.1428 11.8713C54.2766 11.4593 54.13 11.0079 53.7795 10.7533L50.9793 8.71885C50.1956 8.14945 50.5984 6.90983 51.5671 6.90983H55.0283C55.4615 6.90983 55.8455 6.63087 55.9794 6.21885L57.0489 2.92705Z"
+                                fill="#F14F4F" />
+                            <path
+                                d="M105.049 2.92705C105.348 2.00574 106.652 2.00574 106.951 2.92705L108.021 6.21885C108.155 6.63087 108.538 6.90983 108.972 6.90983H112.433C113.402 6.90983 113.804 8.14945 113.021 8.71885L110.22 10.7533C109.87 11.0079 109.723 11.4593 109.857 11.8713L110.927 15.1631C111.226 16.0844 110.172 16.8506 109.388 16.2812L106.588 14.2467C106.237 13.9921 105.763 13.9921 105.412 14.2467L102.612 16.2812C101.828 16.8506 100.774 16.0844 101.073 15.1631L102.143 11.8713C102.277 11.4593 102.13 11.0079 101.78 10.7533L98.9793 8.71885C98.1956 8.14945 98.5984 6.90983 99.5671 6.90983H103.028C103.462 6.90983 103.845 6.63087 103.979 6.21885L105.049 2.92705Z"
+                                fill="#F14F4F" />
+                        </svg>
+                    </div>
+                    <p class="modal__bigitem-sizes">Выберите размер</p>
+                    <div class="modal__bigitem-cards">
+                        <div class="modal__bigitem-card">
+                            36
+                        </div>
+                        <div class="modal__bigitem-card">
+                            37
+                        </div>
+                        <div class="modal__bigitem-card">
+                            38
+                        </div>
+                        <div class="modal__bigitem-card">
+                            39
+                        </div>
+                        <div class="modal__bigitem-card">
+                            40
+                        </div>
+                    </div>
+                    <div class="modal__bigitem-prises">
+                        <p class="modal__bigitem-sale">19 789 ₽ </p>
+                        <p class="modal__bigitem-prise">20 578 ₽</p>
+                    </div>
+                    <button class="modal__bigitem-button">Заказать</button>
+                    <div class="modal__bigitem-pluses">
+                        <div class="modal__bigitem-pluses-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12"
+                                fill="none">
+                                <path
+                                    d="M6.35996 11.3038C6.21972 11.4442 6.02847 11.5227 5.82972 11.5227C5.63097 11.5227 5.43972 11.4442 5.29947 11.3038L1.06498 7.08415C0.625477 6.64627 0.625477 5.9364 1.06498 5.49927L1.59522 4.97098C2.03472 4.5331 2.74647 4.5331 3.18597 4.97098L5.82972 7.60497L12.9735 0.487588C13.4129 0.0497102 14.1254 0.0497102 14.5642 0.487588L15.0944 1.01588C15.5339 1.45376 15.5339 2.16363 15.0944 2.60076L6.35996 11.3038Z"
+                                    fill="#B2B5BB" />
+                            </svg>
+                            <p class="modal__bigitem-pluses-text">Бесплатная доставка до двери</p>
+                        </div>
+                        <div class="modal__bigitem-pluses-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12"
+                                fill="none">
+                                <path
+                                    d="M6.35996 11.3038C6.21972 11.4442 6.02847 11.5227 5.82972 11.5227C5.63097 11.5227 5.43972 11.4442 5.29947 11.3038L1.06498 7.08415C0.625477 6.64627 0.625477 5.9364 1.06498 5.49927L1.59522 4.97098C2.03472 4.5331 2.74647 4.5331 3.18597 4.97098L5.82972 7.60497L12.9735 0.487588C13.4129 0.0497102 14.1254 0.0497102 14.5642 0.487588L15.0944 1.01588C15.5339 1.45376 15.5339 2.16363 15.0944 2.60076L6.35996 11.3038Z"
+                                    fill="#B2B5BB" />
+                            </svg>
+                            <p class="modal__bigitem-pluses-text">Оплата заказа при получении</p>
+                        </div>
+                        <div class="modal__bigitem-pluses-card">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12"
+                                fill="none">
+                                <path
+                                    d="M6.35996 11.3038C6.21972 11.4442 6.02847 11.5227 5.82972 11.5227C5.63097 11.5227 5.43972 11.4442 5.29947 11.3038L1.06498 7.08415C0.625477 6.64627 0.625477 5.9364 1.06498 5.49927L1.59522 4.97098C2.03472 4.5331 2.74647 4.5331 3.18597 4.97098L5.82972 7.60497L12.9735 0.487588C13.4129 0.0497102 14.1254 0.0497102 14.5642 0.487588L15.0944 1.01588C15.5339 1.45376 15.5339 2.16363 15.0944 2.60076L6.35996 11.3038Z"
+                                    fill="#B2B5BB" />
+                            </svg>
+                            <p class="modal__bigitem-pluses-text">Обмен в течении двух недель</p>
+                        </div>
+
+                    </div>
+                    <h1 class="modal__bigitem-title-char">Характеристики</h1>
+                    <p class="modal__bigitem-text">Пол: Мужской
+                    </p>
+                    <p class="modal__bigitem-text">Цвета: Разноцветный
+                    </p>
+                    <p class="modal__bigitem-text">Состав: Кожа, текстиль, резина</p>
+                    <p class="modal__bigitem-text">Страна: Вьетнам
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal_cart">
+        <div class="modal__cart_content">
+            <div class="modal__cart__container">
+                <div class="modal__cart_titles">
+                    <p class="modal__cart__title">Оформление заказа</p>
+                    <p class="modal__cart__ordernumber">Заказ 3456 67</p>
+                </div>
+                <div class="modal__cart_main">
+                    <div class="modal__cart_info">
+                        <div class="flex__row">
+                            <p class="cart__info-text">Товаров в заказе:
+                            </p>
+                            <p class="cart__info-number">3 шт</p>
+                        </div>
+                        <div class="flex__row">
+                            <p class="cart__info-text">Общая сумма заказа:
+                            </p>
+                            <p class="cart__info-price">25 789 ₽</p>
+                        </div>
+                        <div class="flex__row_cart">
+                            <p class="cart__info-contains">Состав заказа</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="8" viewBox="0 0 7 8" fill="none">
+                                <g clip-path="url(#clip0_65_784)">
+                                    <path
+                                        d="M6.92012 5.68997C6.81343 5.79687 6.64032 5.79704 6.53341 5.69037L3.69335 2.8562C3.58672 2.74959 3.41327 2.7496 3.30645 2.85641L0.466594 5.69037C0.359693 5.79705 0.18658 5.79687 0.0798849 5.68997C-0.0267831 5.58307 -0.0266053 5.40994 0.0802814 5.30328L2.91994 2.46951C3.07992 2.30956 3.28999 2.22961 3.50008 2.22961C3.71005 2.22961 3.92007 2.30953 4.07984 2.46932L6.91972 5.30328C7.02661 5.40994 7.02678 5.58307 6.92012 5.68997Z"
+                                        fill="#444B58" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_65_784">
+                                        <rect width="7" height="7" fill="white" transform="matrix(1 0 0 -1 0 7.5)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="modal__cart-items">
+
+                    </div>
+                </div>
+                <div class="modal__cart-form">
+                    <div class="cart__form">
+                        <form action="" class="form_cart">
+                            <input type="text" class="modal-form-input" placeholder="Ваше имя">
+                            <input type="tel" class="modal-form-input" placeholder="Номер телефона">
+                            <input type="email" class="modal-form-input" placeholder="E-mail">
+                            <button class="modal-form-submit">Оформить заказ</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
