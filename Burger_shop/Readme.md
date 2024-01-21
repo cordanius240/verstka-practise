@@ -1,5 +1,6 @@
 <h1 align="center">Burger shop</h1>
 <p align="center">Была реализована верстка магазина доставки еды, с возможностью добавления позиций в корзину</p>
+
 ```javascript
 $(".catalog__card-button").on("click", function () {
     let item_obj = {
@@ -34,8 +35,9 @@ $(".catalog__card-button").on("click", function () {
     update_Chart_toolbar()
 });
 ```
-<p align="center">Так же добавлена возмодность открытия товара в модальном окне с дополнительной информациией о нем</p>
-```
+<p align="center">Так же добавлена возможность открытия товара в модальном окне с дополнительной информациией о нем</p>
+
+```javascript
 $(".modal__bigitem-button").on("click", function () {
     let amount = Number($(this).next().children(".modal__bigitem-counter").text());
     let item_obj = {
