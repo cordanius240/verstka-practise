@@ -21,15 +21,15 @@ $(".catalog__card-button").on("click", function () {
     })
     if ($(".cart__cards").children()) {
         if (curr_cart.includes(item_obj.name)) {
-
-            $(`.cart__card .cart__card-info>p:contains(${item_obj.name})`).parent().next().children(".cart__card-counter").text(Number($(`.cart__card .cart__card-info>p:contains(${item_obj.name})`).parent().next().children(".cart__card-counter").text()) + 1
+            $(\`.cart__card .cart__card-info>p:contains(${item_obj.name})\`).parent().next().children(".cart__card-counter")
+            .text(Number($(\`.cart__card .cart__card-info>p:contains(${item_obj.name})\`).parent()
+            .next().children(".cart__card-counter").text()) + 1
             )
         }
         else {
             $(".cart__cards").append(new_cartelem);
         }
     }
-
     updateChart()
     update_Chart_toolbar()
 });
@@ -58,7 +58,9 @@ $(".modal__bigitem-button").on("click", function () {
     })
     if ($(".cart__cards").children()) {
         if (curr_cart.includes(item_obj.name)) {
-            $(`.cart__card .cart__card-info>p:contains(${item_obj.name})`).parent().next().children(".cart__card-counter").text(Number($(`.cart__card .cart__card-info>p:contains(${item_obj.name})`).parent().next().children(".cart__card-counter").text()) + amount
+            $(\`.cart__card .cart__card-info>p:contains(${item_obj.name})\`).parent().next()
+            .children(".cart__card-counter").text(Number($(\`.cart__card .cart__card-info>p:contains(${item_obj.name})\`)
+            .parent().next().children(".cart__card-counter").text()) + amount
             )
         }
         else {
