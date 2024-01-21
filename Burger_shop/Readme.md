@@ -1,6 +1,6 @@
 <h1 align="center">Burger shop</h1>
 <p align="center">Была реализована верстка магазина доставки еды, с возможностью добавления позиций в корзину</p>
-```
+```javascript
 $(".catalog__card-button").on("click", function () {
     let item_obj = {
         "price": "",
